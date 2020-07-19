@@ -1,0 +1,183 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: 'Raleway', sans-serif;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+}
+
+figure {
+   margin: 0;
+   padding: 0;
+}
+
+:root {
+   --background: hsl(218, 28%, 13%);
+   --blue-color: hsl(176, 68%, 64%);
+   --background-light: hsl(219, 30%, 18%);
+}
+
+/* Navbar */
+nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin : 0;
+   padding: 1rem;
+   color: white;
+   background-color: var(--background);
+}
+
+nav figure img {
+   width: 120px;
+}
+
+nav ul {
+   display: flex;
+}
+
+nav ul li {
+   margin-left: 1rem;
+}
+
+section.hero {
+   height: calc(100vh - 83px);
+   padding: 3rem;
+   color: white;
+   background-color: var(--background);
+}
+
+.hero figure img{
+   width: 100%;
+}
+
+.hero h1 {
+   text-align: center;
+   letter-spacing: 5px;
+   font-size: 2rem;
+   line-height: 3rem;
+}
+
+.hero h3{
+   text-align: center;
+   font-weight: 400;
+   line-height: 2rem;
+}
+
+.hero button {
+   display: block;
+   margin: 1rem auto;
+   padding: 1rem 5rem;
+   border-radius: 30px;
+   background-color: var(--blue-color);
+   color: white;
+   font-weight: 700;
+   border: none;
+   cursor: pointer;
+   font-size: 1.3rem;
+}
+
+.articles {
+   padding: 3rem;
+   text-align: center;
+   background-color: var(--background);
+   color: white;
+}
+
+.articles h4 {
+   font-size: 2rem;
+}
+
+.articles article {
+   margin-bottom: 10rem;
+}
+.articles article figure img {
+   width: 100px;
+}
+
+
+.stayfocus {
+   padding: 3rem;
+   height: 100vh;
+   color: white;
+   background-color: var(--background);
+}
+
+.stayfocus figure img {
+   width: 100%;
+}
+
+.stayfocus h3 {
+   font-size: 2rem;
+}
+
+.stayfocus p {
+   line-height: 2rem;
+   font-size: 1.5rem;
+}
+
+.stayfocus a {
+   display: flex;
+   align-items: center;
+   color: var(--blue-color);
+   font-size: 1.3rem;
+   position: relative;
+}
+
+
+.stayfocus a img {
+   width: 30px;
+   margin-left: 10px;
+}
+
+.stayfocus a::before{
+   content: "";
+   border-bottom: 2px solid var(--blue-color);
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   width: 50%;
+   margin-bottom: -10px;
+}
+
+.opinions {
+   color: white;
+   padding: 3rem;
+   background-color: var(--background);
+}
+
+.opinions article {
+   padding: 2rem;
+   background-color: var(--background-light);
+   margin-bottom: 2rem;
+   border-radius: 5px;
+}
+
+.opinions p {
+   line-height: 2rem;
+}
+
+.opinions .user {
+   display: flex;
+   align-items: center;
+   line-height: 1rem;
+}
+
+.opinions figure img {
+   width: 60px;
+   border-radius: 50%;
+}
