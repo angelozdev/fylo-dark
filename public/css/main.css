@@ -24,7 +24,13 @@ figure {
 }
 
 .wrapper {
-   max-width: 1040px;
+   max-width: 1080px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.wrapper-md {
+   max-width: 1440px;
    width: 100%;
    margin: 0 auto;
 }
@@ -201,6 +207,12 @@ section.hero {
    color: white;
    padding: 3rem;
    background-color: var(--background);
+}
+
+.opinions-grid {
+   display: grid;
+   justify-content: space-around;
+   grid-template-columns: repeat(auto-fill, 450px);
 }
 
 .opinions article {
