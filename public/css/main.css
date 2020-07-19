@@ -23,25 +23,35 @@ figure {
    padding: 0;
 }
 
+.wrapper {
+   max-width: 1040px;
+   width: 100%;
+   margin: 0 auto;
+}
+
 :root {
    --background: hsl(218, 28%, 13%);
    --blue-color: hsl(176, 68%, 64%);
-   --background-light: hsl(219, 30%, 18%);
+   --background-light: hsl(217, 28%, 15%);
 }
 
 /* Navbar */
 nav {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
    margin : 0;
    padding: 1rem;
    color: white;
-   background-color: var(--background);
+   background-color: var(--background-light);
+}
+
+.nav-grid {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
 }
 
 nav figure img {
    width: 120px;
+   cursor: pointer;
 }
 
 nav ul {
@@ -52,11 +62,28 @@ nav ul li {
    margin-left: 1rem;
 }
 
+
+/* Hero */
 section.hero {
-   height: calc(100vh - 83px);
+   min-height: calc(100vh - 83px);
    padding: 3rem;
    color: white;
-   background-color: var(--background);
+   width: 100%;
+   background-color: var(--background-light);
+   background-image: url("../assets/bg-curvy-mobile.svg");
+   background-repeat: no-repeat;
+   background-position: center bottom;
+   background-size: contain;
+}
+
+.hero-grid {
+   width: 100%;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   max-width: 768px;
 }
 
 .hero figure img{
@@ -81,7 +108,8 @@ section.hero {
    margin: 1rem auto;
    padding: 1rem 5rem;
    border-radius: 30px;
-   background-color: var(--blue-color);
+   background: rgb(101,226,217);
+   background: linear-gradient(90deg, rgba(101,226,217,1) 35%, rgba(51,158,204,1) 100%);
    color: white;
    font-weight: 700;
    border: none;
@@ -94,6 +122,13 @@ section.hero {
    text-align: center;
    background-color: var(--background);
    color: white;
+}
+
+.articles-grid {
+   display: grid;
+   justify-content: center;
+   grid-template-columns: repeat(auto-fill, 450px);
+   column-gap: 100px;
 }
 
 .articles h4 {
@@ -110,13 +145,21 @@ section.hero {
 
 .stayfocus {
    padding: 3rem;
-   height: 100vh;
    color: white;
    background-color: var(--background);
 }
 
+.stayfocus-grid {
+   display: grid;
+   justify-items: center;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 2rem;
+}
+
 .stayfocus figure img {
    width: 100%;
+   max-width: 768px;
+   display: inline-block;
 }
 
 .stayfocus h3 {
@@ -180,4 +223,11 @@ section.hero {
 .opinions figure img {
    width: 60px;
    border-radius: 50%;
+}
+
+
+@media screen and (max-width: 1080px){
+   .stayfocus-grid {
+      grid-template-columns: 1fr;
+   }
 }
